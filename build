@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# remove bin if it exists and remake the directory
+rm -r bin
+mkdir bin
+# move into source and build
+cd src
+./build
+# move executable out of src to bin
+mv main ../bin/
