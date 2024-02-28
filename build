@@ -5,6 +5,12 @@ rm -r bin
 mkdir bin
 # move into source and build
 cd src
-./build
+
+if [ "$1" == "debug" ]; then
+	./build debug
+else
+	./build
+fi
+
 # move executable out of src to bin
 mv main ../bin/

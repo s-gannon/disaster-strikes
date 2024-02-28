@@ -3,4 +3,8 @@
 CC=clang
 FLAGS="-Wall -Wextra -pedantic -g"
 
+if [ "$1" == "debug" ]; then
+	FLAGS+=" -DDEBUG_MODE"
+fi
+
 $CC $FLAGS main.c -o main
